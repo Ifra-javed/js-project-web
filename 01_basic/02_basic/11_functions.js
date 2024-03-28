@@ -32,7 +32,35 @@ function loginUserMsg(username = "motu"){    //default value
     }
     return`"${username} just logged in"`  //string interpultion
 }
-console.log(loginUserMsg("ifra"));
+//console.log(loginUserMsg("ifra"));
 //console.log(loginUserMsg());  //undefined
 
+function calculateCartPrice(val1,val2, ...num1){   //rest operator
+    return num1
+
+}
+//console.log(calculateCartPrice(2,4,6,8));
+
+//..........object ko function main pass krnaa.........
+const user ={
+    name: "ifra",
+    age: "21"
+}
+function handleObject(anyobject){
+    console.log(`username is ${anyobject.name} and age is ${anyobject.age}`);
+}
+//handleObject(user)
+
+handleObject({     //.....pass direct object
+    name:"motu",
+    age: 21
+})
+
+//........array pass in function.............
+const myNewArray = [200,300,400,500] 
+
+function  returnSecondValue(getarray){
+    return getarray[1]
+}
+console.log(returnSecondValue(myNewArray))
 
