@@ -17,7 +17,7 @@ console.log(a)
 console.log(b)
 console.log(c)
 
-//.........nested scope..........
+//.........nested scope.............
 
 
 function one(){
