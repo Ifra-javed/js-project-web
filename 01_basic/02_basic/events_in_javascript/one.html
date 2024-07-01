@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Amazing images</h2>
+    <div id="photo">
+        <ul id="images">
+            <li><img id="img1" src="/images/download (2).jpg" alt="photoshop"></li>
+            <li><img id="img2" src="/images/download (1).jpg" alt=""></li>
+            <li><img id="img3"src="/images/download (3).jpg" alt=""></li>
+            <li><img id="img4"src="/images/download (4).jpg" alt=""></li>
+            <li><img id="img5"src="/images/download.jpg" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+// document.getElementById("img1").onclick = function(){
+//     alert("welcome image 1");
+// }
+
+//...........attachEvent()
+// JQuery on 
+
+//type, timestamp, defaultPrevent, target, toElement
+//srcElement, currentTarget, clientX, clientY
+//screenX, screenY, altKey, ctrlKey, shiftKey, KeyCode
+
+
+// document.getElementById("img1").addEventListener("click", function(e){
+//     console.log(e);
+//     // alert("welcome again image 1");
+// }, false)
+
+// document.getElementById("img2").addEventListener("click", function(e){
+//     console.log("img clicked");
+//     e.stopPropagation()
+// }, false)
+
+// document.getElementById("google").addEventListener("click", function(e){
+//     console.log("google clicked");
+//     e.preventDefault()
+//     e.stopPropagation()
+// },false)
+
+document.querySelector("#images").addEventListener("click", function(e){
+    // console.log(e.target.parentNode);
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+
+})
+// removeIt.parentNode.removeChild(removeIt)
+
+</script>
+</html>
