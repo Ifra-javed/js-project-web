@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JAVASCRIPT</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    // const sayDate = function(){
+    //     console.log("ifra",Date.now())
+    // }
+    // setInterval(sayDate,2000)
+
+   //......... work same like above  written method different............
+const sayDate = function(str){
+        console.log(str,Date.now())
+    }
+    // setInterval(sayDate,2000 ,"hi")
+
+
+    const intervalId = setInterval(sayDate,10000,"hi")
+    clearInterval(intervalId)
+    //.........stop interval.........
+
+    let stopMe;
+
+    document.querySelector("#start").addEventListener("click", function(){
+        stopMe = setInterval(sayDate)
+        console.log("start");
+    })
+
+    document.querySelector("#stop").addEventListener("click", function(){
+        clearInterval(stopMe)
+        console.log("stoped");
+    })
+
+</script>
+</html>
